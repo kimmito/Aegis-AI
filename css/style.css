@@ -30,7 +30,16 @@ body {
     text-align: center;
     position: relative;
 }
-
+.hero-wrapper{
+    background-color: rgb(250, 250, 250);
+    border-radius: 20px;
+    position: relative;
+    max-width: 70%;
+    margin: 25px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.411);
+}
 .hero-logo video {
     border-radius: 10%;
     max-width: 300px;
@@ -45,13 +54,14 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1rem;
+    /* text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.247); */
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #64748b;
-    margin-bottom: 2rem;
+    color: #1d4ed8;
     font-weight: 400;
+    /* text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.39); */
 }
 
 .btn-hero {
@@ -271,8 +281,92 @@ body {
     background-color: #f8fafc !important;
 }
 
+.reviews-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+    color: #2f2f2f;
+    text-align: center;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.reviews-divider {
+    width: 100px;
+    height: 3px;
+    background: #498a2d;
+    margin: 25px auto;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review-item {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.review-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #498a2d;
+}
+
+.reviewer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #2f2f2f;
+}
+
+.review-stars {
+    color: #53b32b;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.review-text {
+    font-style: italic;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media screen and (max-width: 992px) {
+    .review-item {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
 @media (max-width: 768px) {
-    .hero-section{
+    .review-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .hero-section {
         background-attachment: scroll;
     }
     .hero-title {
