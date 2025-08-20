@@ -19,7 +19,7 @@ body {
 
 .hero-section {
     min-height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(167, 98, 98, 0.3)), url('../img/hero-bg.webp');
+    background: linear-gradient(#d3d1d118, #6b6a6a46), url('../img/hero-bg.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
