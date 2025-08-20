@@ -19,7 +19,8 @@ body {
 
 .hero-section {
     min-height: 100vh;
-    background: linear-gradient(#d3d1d118, #6b6a6a46), url('../img/hero-bg.webp');
+    background-color: #d3d1d13f;
+    background-image: url('../img/hero-bg.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -274,7 +275,7 @@ body {
     .hero-title {
         font-size: 2.5rem;
     }
-    .hero-logo video{
+    .hero-logo video {
         max-width: 150px;
     }
     .hero-subtitle {
