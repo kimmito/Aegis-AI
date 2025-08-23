@@ -214,63 +214,56 @@
 
         <!-- Reviews Section -->
         <section class="reviews-section">
-            <div class="reviews-container">
-                <h2 class="section-title">Αξιολογήσεις Χρηστών</h2>
-                <div class="reviews-divider"></div>
-                <div class="reviews-grid">
-                    <div class="review-item">
-                        <div class="review-card">
-                            <img src="https://zornet.ru/_fr/83/7890600.jpg" alt="Ανδρέας Παππάς" />
-                            <div class="reviewer-name">Ανδρέας Παππάς</div>
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="review-text">
-                                Απίστευτο εργαλείο! Το Aegis AI μου έχει αυξήσει σημαντικά το ποσοστό επιτυχίας μου. Τα
-                                σήματα είναι ακριβή και έγκαιρα.
-                            </p>
+            <h2 class="section-title reviews-title">Αξιολογήσεις Χρηστών</h2>
+            <div class="reviews-divider"></div>
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                        ></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active carousel-group">
+                            <img src="img/review1.jpg" class="carousel-image" alt="..." />
+                            <img src="img/review2.jpg" class="carousel-image" alt="..." />
+                            <img src="img/review3.jpg" class="carousel-image" alt="..." />
+                        </div>
+                        <div class="carousel-item carousel-group">
+                            <img src="img/review4.jpg" class="carousel-image" alt="..." />
+                            <img src="img/review5.jpg" class="carousel-image" alt="..." />
+                            <img src="img/review6.jpg" class="carousel-image" alt="..." />
                         </div>
                     </div>
-
-                    <div class="review-item">
-                        <div class="review-card">
-                            <img src="https://zornet.ru/_fr/83/2047084.jpg" alt="Δημήτρης Αθανασίου" />
-                            <div class="reviewer-name">Δημήτρης Αθανασίου</div>
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p class="review-text">
-                                Πολύ καλή ανάλυση δεδομένων. Μερικές φορές θα ήθελα περισσότερες λεπτομέρειες, αλλά
-                                γενικά είναι εξαιρετικό.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="review-item">
-                        <div class="review-card">
-                            <img src="https://zornet.ru/_fr/83/5640570.jpg" alt="Μαρία Κωνσταντίνου" />
-                            <div class="reviewer-name">Μαρία Κωνσταντίνου</div>
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p class="review-text">
-                                Αξιόπιστο και εύχρηστο. Η καλύτερη επένδυση που έχω κάνει για τα στοιχήματά μου. Συνιστώ
-                                ανεπιφύλακτα!
-                            </p>
-                        </div>
-                    </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </section>
