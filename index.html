@@ -20,10 +20,24 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8">
                         <div class="hero-logo">
-                            <video autoplay loop muted playsinline>
+                            <video autoplay loop muted playsinline poster="img/fallback-logo.jpg" id="logoVideo">
+                                <source src="img/logo.webm" type="video/webm" />
                                 <source src="img/logo.MP4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
+                            <img
+                                src="img/fallback-logo.jpg"
+                                class="video-fallback"
+                                id="videoFallback"
+                                alt="Aegis AI Logo"
+                            />
+                            <img
+                                src="img/logo.gif"
+                                class="gif-fallback"
+                                id="gifFallback"
+                                alt="Aegis AI Animated Logo"
+                            />
+                            <button class="btn btn-hero play-button" id="playButton">▶️ Αναπαραγωγή του βίντεο</button>
                         </div>
                         <div class="hero-wrapper">
                             <h1 class="hero-title">Aegis AI</h1>
@@ -217,7 +231,11 @@
             <h2 class="section-title reviews-title">Αξιολογήσεις Χρηστών</h2>
             <div class="reviews-divider"></div>
             <div class="container">
-                <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+                <div
+                    id="carouselExampleIndicators"
+                    class="carousel carousel-dark slide carousel-fade"
+                    data-bs-ride="carousel"
+                >
                     <div class="carousel-indicators">
                         <button
                             type="button"
@@ -295,5 +313,54 @@
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const video = document.getElementById('logoVideo');
+                const fallbackImage = document.getElementById('videoFallback');
+                const gifFallback = document.getElementById('gifFallback');
+                const playButton = document.getElementById('playButton');
+
+                const playPromise = video.play();
+
+                if (playPromise !== undefined) {
+                    playPromise
+                        .then(() => {
+                            fallbackImage.style.display = 'none';
+                            gifFallback.style.display = 'none';
+                            playButton.style.display = 'none';
+                        })
+                        .catch((error) => {
+                            console.log('Автовоспроизведение заблокировано, показываем GIF');
+
+                            video.style.display = 'none';
+                            gifFallback.style.display = 'block';
+
+                            playButton.style.display = 'none';
+                        });
+                }
+
+                video.addEventListener('error', function () {
+                    console.error('Ошибка загрузки видео, показываем GIF');
+                    video.style.display = 'none';
+                    gifFallback.style.display = 'block';
+                    fallbackImage.style.display = 'none';
+                    playButton.style.display = 'none';
+                });
+
+                playButton.addEventListener('click', function () {
+                    video
+                        .play()
+                        .then(() => {
+                            fallbackImage.style.display = 'none';
+                            gifFallback.style.display = 'none';
+                            playButton.style.display = 'none';
+                            video.style.display = 'block';
+                        })
+                        .catch((e) => {
+                            console.error('Не удалось воспроизвести видео:', e);
+                        });
+                });
+            });
+        </script>
     </body>
 </html>
