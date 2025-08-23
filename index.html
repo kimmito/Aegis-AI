@@ -198,7 +198,7 @@
             </div>
         </section>
 
-        <section class="section-padding bg-second">
+        <section class="section-padding">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center mb-5">
@@ -226,20 +226,40 @@
             </div>
         </section>
 
+        <!-- Table Section -->
+        <section class="table-section bg-second">
+            <div class="container">
+                <h2 class="section-title table-title">📈 Στατιστικά & Αποτελέσματα</h2>
+                <div class="scroll-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Result</th>
+                                <th>Odds</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="scroll-table-body">
+                        <table>
+                            <tbody id="table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Reviews Section -->
         <section class="reviews-section">
-            <h2 class="section-title reviews-title">Αξιολογήσεις Χρηστών</h2>
+            <h2 class="section-title reviews-title">🤝 Αξιολογήσεις Χρηστών</h2>
             <div class="reviews-divider"></div>
             <div class="container">
-                <div
-                    id="carouselExampleIndicators"
-                    class="carousel carousel-dark slide carousel-fade"
-                    data-bs-ride="carousel"
-                >
+                <div id="carouselIndicators" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button
                             type="button"
-                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-target="#carouselIndicators"
                             data-bs-slide-to="0"
                             class="active"
                             aria-current="true"
@@ -247,7 +267,7 @@
                         ></button>
                         <button
                             type="button"
-                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-target="#carouselIndicators"
                             data-bs-slide-to="1"
                             aria-label="Slide 2"
                         ></button>
@@ -267,7 +287,7 @@
                     <button
                         class="carousel-control-prev"
                         type="button"
-                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-target="#carouselIndicators"
                         data-bs-slide="prev"
                     >
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -276,7 +296,7 @@
                     <button
                         class="carousel-control-next"
                         type="button"
-                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-target="#carouselIndicators"
                         data-bs-slide="next"
                     >
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -287,7 +307,7 @@
         </section>
 
         <!-- Final CTA Section -->
-        <section class="cta-section">
+        <section class="cta-section bg-second">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-10">
@@ -313,54 +333,6 @@
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const video = document.getElementById('logoVideo');
-                const fallbackImage = document.getElementById('videoFallback');
-                const gifFallback = document.getElementById('gifFallback');
-                const playButton = document.getElementById('playButton');
-
-                const playPromise = video.play();
-
-                if (playPromise !== undefined) {
-                    playPromise
-                        .then(() => {
-                            fallbackImage.style.display = 'none';
-                            gifFallback.style.display = 'none';
-                            playButton.style.display = 'none';
-                        })
-                        .catch((error) => {
-                            console.log('Автовоспроизведение заблокировано, показываем GIF');
-
-                            video.style.display = 'none';
-                            gifFallback.style.display = 'block';
-
-                            playButton.style.display = 'none';
-                        });
-                }
-
-                video.addEventListener('error', function () {
-                    console.error('Ошибка загрузки видео, показываем GIF');
-                    video.style.display = 'none';
-                    gifFallback.style.display = 'block';
-                    fallbackImage.style.display = 'none';
-                    playButton.style.display = 'none';
-                });
-
-                playButton.addEventListener('click', function () {
-                    video
-                        .play()
-                        .then(() => {
-                            fallbackImage.style.display = 'none';
-                            gifFallback.style.display = 'none';
-                            playButton.style.display = 'none';
-                            video.style.display = 'block';
-                        })
-                        .catch((e) => {
-                            console.error('Не удалось воспроизвести видео:', e);
-                        });
-                });
-            });
-        </script>
+        <script src="js/index.js"></script>
     </body>
 </html>

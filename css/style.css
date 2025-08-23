@@ -319,6 +319,66 @@ body {
     display: none;
     margin: 15px auto;
 }
+* > th{
+    background: rgb(243, 188, 5) !important;
+}
+.month{
+    background-color: rgb(202, 201, 201) !important;
+    font-weight: 700;
+}
+
+.table-section{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.table-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.scroll-table-body {
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.scroll-table table {
+    width: 100%;
+    table-layout: fixed;
+    border: none;
+}
+.scroll-table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #d8d8d8;
+    font-size: 14px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.scroll-table tbody td {
+    text-align: left;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+.scroll-table tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 1600px) {
     .carousel-control-next {
         margin-right: 0;
