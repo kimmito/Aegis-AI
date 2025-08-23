@@ -66,11 +66,22 @@ async function loadTableData() {
 
         data.forEach((item) => {
             const row = document.createElement('tr');
+
+            // Определяем класс для ячейки с результатом
+            let scoreClass = '';
+            if (item.score < 0) {
+                scoreClass = 'bg-red';
+            } else if (item.score === 0) {
+                scoreClass = 'bg-yellow';
+            } else if (item.score > 0) {
+                scoreClass = 'bg-green';
+            }
+
             row.innerHTML = `
                 <td>${item.id}</td>
                 <td>${item.result}</td>
                 <td>${item.odds}</td>
-                <td>${item.score}</td>
+                <td class="${scoreClass}">${item.score}</td>
             `;
 
             const idsUpper = item.id.toUpperCase();

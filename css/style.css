@@ -280,6 +280,15 @@ body {
 .bg-light {
     background-color: #f8fafc !important;
 }
+.bg-red {
+    background-color: #ff6b6b;
+}
+.bg-yellow {
+    background-color: #ffd93d;
+}
+.bg-green {
+    background-color: #6bcb77;
+}
 .reviews-section {
     padding-bottom: 60px;
 }
@@ -378,7 +387,6 @@ body {
     background-color: rgb(202, 201, 201) !important;
     font-weight: 700;
 }
-
 
 .alternative-table::-webkit-scrollbar {
     width: 8px;
