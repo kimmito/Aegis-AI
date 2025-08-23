@@ -280,14 +280,17 @@ body {
 .bg-light {
     background-color: #f8fafc !important;
 }
+
 .bg-red {
-    background-color: #ff6b6b;
+    background-color: #ffcccc;
 }
+
 .bg-yellow {
-    background-color: #ffd93d;
+    background-color: #ffffcc;
 }
+
 .bg-green {
-    background-color: #6bcb77;
+    background-color: #ccffcc;
 }
 .reviews-section {
     padding-bottom: 60px;
